@@ -21,7 +21,7 @@ class CreateClipsTable extends Migration
             $table->string('url');
             $table->integer('start_time')->unsigned();
             $table->integer('end_time')->unsigned();
-            $table->bigInteger('views')->unsigned();
+            $table->bigInteger('views')->unsigned()->default(0);
             $table->bigInteger('rating')->default(1000);
             $table->timestamps();
         });

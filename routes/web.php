@@ -14,3 +14,12 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => ['web', 'auth']], function () {
+	Route::get('clips', 'ClipController@index')->name('clips');
+	Route::get('clips/create', 'ClipController@create')->name('clips.create');
+	Route::post('clips/create', 'ClipController@store')->name('clips.store');
+	Route::delete('clips/destroy/{id}', 'ClipController@destroy')->name('clips.destroy');
+
+	// Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+});

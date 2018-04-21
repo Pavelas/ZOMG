@@ -12,7 +12,7 @@ class Clip extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'url', 'start_time', 'end_time', 'views', 'rating'
+        'game_id', 'title', 'url', 'start_time', 'end_time', 'views', 'rating'
     ];
 
     public function user()

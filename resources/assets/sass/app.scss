@@ -1,14 +1,204 @@
-
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
 // Variables
-@import "variables";
+// @import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+// Custom Styles
+body {
+	overflow: hidden;
+	padding-top: 70px;
+}
+
+#wrapper {
+    padding-left: 0;
+    /* -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; */
+    margin-top:-20px;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #161616;
+    /* -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; */
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    padding: 15px;
+    // background-image: url("../bg.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+    
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 0px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+.navbar {
+    margin-bottom: 0px !important;
+}
+
+.navbar-inverse {
+    background-color: #252525;
+}
+
+#logo {
+    height: 50px;
+    margin-top: -15px;
+}
+
+.battle-side {
+    height: 50vh;
+    margin: 0px;
+    padding: 10px;
+}
+
+.battle-side.col-lg-6 .battle-side.col-md-6 .battle-side.col-sm-6 {
+    padding: 5px !important;
+}
+
+.battle-side video {
+    height: auto;
+    width: auto;
+}
+
+.red {
+    // background-image: url("../red.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.blue {
+    // background-image: url("../blue.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto 100%;
+}
+
+.container-fluid {
+    padding: 0px;
+    margin:  0px;
+}
+
+.username {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#vs {
+    position: absolute;
+    z-index: 2000;
+    height: 300px;
+    left: 50%; top: 50%; 
+    margin: -150px 0 0 -150px;
+}
+
+video, #my_video, .video-js, .vjs-default-skin
+{
+    transform: translateY(10%);
 }

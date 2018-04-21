@@ -27,11 +27,9 @@
     <div id="wrapper">
         @include('partials.sidebar')
     
-        <!-- Page Content -->
         <div id="page-content-wrapper">
             @yield('content')
         </div>
-        <!-- /#page-content-wrapper -->
     
     </div>
 </body>

@@ -14,4 +14,14 @@ class Clip extends Model
     protected $fillable = [
         'title', 'url', 'start_time', 'end_time', 'views', 'rating'
     ];
+
+    public function user()
+    {
+    	return $this->belongsTo('App\User');
+    }
+
+    public function game()
+    {
+        return $this->belongsTo('App\Game');
+    }
 }

@@ -14,4 +14,9 @@ class Game extends Model
     protected $fillable = [
         'title', 'abbreviation', 'icon', 'image'
     ];
+
+    public function clips()
+    {
+    	return $this->hasMany('App\Clip');
+    }
 }

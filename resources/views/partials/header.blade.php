@@ -40,9 +40,9 @@
                 </li>
             @endforeach
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('games') }}">
                     <i class="fa fa-ellipsis-v"></i>
-                    Shore more
+                    Show More
                 </a>
             </li>
             <li class="header">Copyright</li>

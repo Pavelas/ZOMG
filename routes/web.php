@@ -17,6 +17,7 @@ Route::get('test', 'VoteController@test');
 
 Route::get('/', 'VoteController@index')->name('vote.get');
 Route::get('game/{id?}', 'VoteController@index')->name('vote.get.game');
+Route::get('games', 'GameController@index')->name('games');
 Route::post('vote/{id}', 'VoteController@store')->name('vote.post');
 
 Route::group(['middleware' => ['web', 'auth']], function () {

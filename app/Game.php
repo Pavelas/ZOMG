@@ -12,7 +12,7 @@ class Game extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'abbreviation', 'icon', 'image'
+        'title', 'abbreviation', 'icon', 'image', 'is_popular'
     ];
 
     public function clips()

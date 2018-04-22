@@ -13,9 +13,14 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('test', 'VoteController@test');
+
+Route::get('/', 'VoteController@index')->name('vote.get');
+Route::get('game/{id?}', 'VoteController@index')->name('vote.get.game');
+Route::post('vote/{id}', 'VoteController@store')->name('vote.post');
 
 Route::group(['middleware' => ['web', 'auth']], function () {
+	Route::get('trending', 'ClipController@trending')->name('clips.trending');
 	Route::get('clips', 'ClipController@index')->name('clips');
 	Route::get('clips/create', 'ClipController@create')->name('clips.create');
 	Route::post('clips/create', 'ClipController@store')->name('clips.store');

@@ -19,6 +19,14 @@ class ClipController extends Controller
         return view('clips.index');
     }
 
+
+    public function trending()
+    {
+        $clips = Clip::orderByDesc('rating')->limit(15)->get();
+
+        return view('clips.trending', compact('clips'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

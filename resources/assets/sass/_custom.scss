@@ -1,0 +1,96 @@
+.bg-darker {
+	background: #161616;
+}
+
+li.header {
+	background: #222222;
+	color: #505050;
+	font-size: 12px;
+	text-transform: uppercase;
+	padding: 7px 10px;
+}
+
+li.nav-item:hover,
+li.active-item {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-top li:hover,
+li.no-hover:hover {
+	background: #161616;
+}
+
+.nav-link i {
+	width: 20px;
+	text-align: center;
+	font-size: 16px;
+	color: crimson;
+	margin-right: 10px;
+}
+
+.img-responsive {
+	border-radius: 20px;
+	max-width: 20px;
+	margin-right: 10px;
+}
+
+.content-wrapper {
+	background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+.circle {
+	border-radius: 100px;
+}
+
+.btn-flat {
+	border-radius: 0;
+}
+
+.crud {
+	border: 0;
+	border-radius: 0;
+}
+
+.crud .card-header {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 500;
+	border-radius: 0;
+	background: #dd163b;
+}
+
+.crud .card-body {
+	color: #fff;
+	background: #232930;
+}
+
+.crud .form-control {
+	background: #293139;
+	border-color: #1e2429;
+	border-radius: 0;
+}
+
+.crud .btn {
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 500;
+	background: #dd163b;
+	padding: 8px 25px;
+	border: 0;
+	border-radius: 0;
+}
+
+.crud .btn:hover {
+	background: #eb3154;
+}
+
+.bg-blue,
+.bg-blue .card {
+	background: rgba(0, 123, 255, 0.8) !important;
+	border: rgba(0, 123, 255, 0.9) !important;
+}
+
+.bg-red {
+	background: rgba(220, 53, 69, 0.8) !important;
+	border: rgba(220, 53, 69, 0.9) !important;
+}

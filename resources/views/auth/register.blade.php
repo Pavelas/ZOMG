@@ -1,36 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" style="margin-top: 50px;">
+<div class="container">
     <div class="row">
-        <div class="col-md-12">
-            @if (session('status'))
-                <div class="alert alert-success">
-                    {{ session('status') }}
-                </div>
-            @endif
-
-            <div class="panel panel-info">
-                <div class="panel-heading">{{ __('Register') }}</div>
-                <div class="panel-body">                
+        <div class="col-md-10 mx-auto mt-4">
+            <div class="card crud">
+                <div class="card-header">Register</div>
+                <div class="card-body">              
                     <form method="POST" action="{{ route('register') }}" class="form-horizontal">
                         @csrf
 
-                        <div class="form-group">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                        <div class="form-group row">
+                            <label for="username" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="username" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" required autofocus>
 
-                                @if ($errors->has('name'))
+                                @if ($errors->has('username'))
                                     <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('username') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
@@ -44,7 +38,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
@@ -58,7 +52,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
                             <div class="col-md-6">
@@ -67,7 +61,7 @@
                         </div>
 
                         <div class="form-group mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-12 offset-md-5">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>

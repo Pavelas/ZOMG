@@ -1,30 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" style="margin-top: 50px;">
+<div class="container">
     <div class="row">
-        <div class="col-md-12">
-            @if (session('status'))
-                <div class="alert alert-success">
-                    {{ session('status') }}
-                </div>
-            @endif
-
-            @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-            @endif
-
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    Create Clip
-                </div>
-                <div class="panel-body">
+        <div class="col-md-10 mx-auto mt-4">
+            <div class="card crud">
+                <div class="card-header">Add a new Clip</div>
+                <div class="card-body">
                     <form class="form-horizontal" action="{{ route('clips.store') }}" method="POST">
                         @csrf
                         <input type="hidden" name="start_time" value="0">

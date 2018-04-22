@@ -1,23 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" style="margin-top: 50px;">
+<div class="container">
     <div class="row">
-        <div class="col-md-12">
-            @if (session('status'))
-                <div class="alert alert-success">
-                    {{ session('status') }}
-                </div>
-            @endif
-
-            <div class="panel panel-info">
-                <div class="panel-heading">{{ __('Login') }}</div>
-                <div class="panel-body">
-                    
+        <div class="col-md-10 mx-auto mt-4">
+            <div class="card crud">
+                <div class="card-header">Login</div>
+                <div class="card-body">
                     <form method="POST" action="{{ route('login') }}" class="form-horizontal">
                         @csrf
-
-                        <div class="form-group">
+                        <div class="form-group row">
                             <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
@@ -31,7 +23,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
@@ -61,7 +53,7 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <a class="btn btn-primary" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
                             </div>

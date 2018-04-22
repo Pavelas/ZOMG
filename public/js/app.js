@@ -13693,6 +13693,8 @@ module.exports = __webpack_require__(36);
 
 __webpack_require__(12);
 
+$(document).ready(function () {});
+
 /***/ }),
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {

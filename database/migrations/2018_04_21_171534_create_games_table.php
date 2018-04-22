@@ -19,6 +19,7 @@ class CreateGamesTable extends Migration
             $table->string('abbreviation');
             $table->string('icon');
             $table->string('image');
+            $table->boolean('is_popular')->default(false);
             $table->timestamps();
         });
     }
